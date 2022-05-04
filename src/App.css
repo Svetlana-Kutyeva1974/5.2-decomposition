@@ -45,6 +45,14 @@
 .horizontal {
   display: flex;
   text-align: center;
+  margin-bottom: 10px;
+}
+
+.vertikal {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 10px;
 }
 
 .item {

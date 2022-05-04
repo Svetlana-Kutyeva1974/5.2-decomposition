@@ -53,31 +53,7 @@ function App() {
           text: 'Пресс-секретарь Путина Песков заявил о передаче Украине документа'
       },
   ]
-/*
-  const rates = [
-    {
-      id: shortid.generate(),
-        link: 'https://yandex.ru/news/quotes/1.html?appsearch_header=1',
-        title: 'USD',
-        cur: '77,08',
-        diff: '-1,95',
-    },
-    {
-      id: shortid.generate(),
-        link: 'https://yandex.ru/news/quotes/23.html?appsearch_header=1',
-        title: 'EUR',
-        cur: '83,27',
-        diff: '-2.70',
-    },
-    {
-      id: shortid.generate(),
-        link: 'https://yandex.ru/news/quotes/1006.html?appsearch_header=1',
-        title: 'НЕФТЬ',
-        cur: '105,51',
-        diff: '-0,35',
-    },
-]
-*/
+
 
 
 const dayLink =
@@ -87,6 +63,7 @@ const dayLink =
     }
 const widgetsItems = [];
 
+console.log('дата', new Date(Date.now()).toLocaleString());
 
   return (
     <div className='container'>
@@ -101,3 +78,7 @@ const widgetsItems = [];
 
 export default App;
 //https://github.com/RebikHub/ra-composition-decomposition/tree/master/src
+
+//https://github.com/nugmanov87/ra-5-2/blob/master/src/components/SearchBar.jsx
+
+//https://github.com/vikkelas/RA-5-2/blob/main/src/News/News.js

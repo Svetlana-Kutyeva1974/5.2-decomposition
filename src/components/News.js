@@ -1,16 +1,37 @@
-const reportWebVitals = onPerfEntry => {
-  if (onPerfEntry && onPerfEntry instanceof Function) {
-    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-      getCLS(onPerfEntry);
-      getFID(onPerfEntry);
-      getFCP(onPerfEntry);
-      getLCP(onPerfEntry);
-      getTTFB(onPerfEntry);
-    });
-  }
-};
+import React from "react";
+//import PropTypes from "prop-types";
+import { nanoid } from 'nanoid'
 
-export default reportWebVitals;
+const News = ({ listTitle, listNews }) => {
+  return (
+    <>
+    <div className="ui horizontal list">
+      {listTitle.map(link => (
+        <a href="/" className="item" key={nanoid()}>
+          {link}
+        </a>
+      ))}
+      {new Date(Date.now()).toLocaleString()}
+    </div>
+    
+    <div className="ui vertikal list">
+    {listNews.map(link => (
+      <a href="/" className="item" key={nanoid()}>
+        {link.text}
+      </a>
+    ))}
+  </div>
+
+  
+  </>
+  );
+};
+/*
+SearchList.propTypes = {
+  links: PropTypes.arrayOf(PropTypes.string.isRequired)
+};
+*/
+export default News;
 
 /*
 <div class="news__agency-icon news__agency-icon_image_yes" title="РИА Новости"
@@ -25,4 +46,7 @@ export default reportWebVitals;
 
  <div class="news__agency-icon news__agency-icon_image_yes" title="Коммерсантъ" 
  style="background-image:url(&quot;https://avatars.mds.yandex.net/get-ynews-logo/26056/1048-1478692902313-square/logo-square&quot;)"></div>
-*/
+
+дата в js: new Date(Date.now()).toLocaleString().split(',')[0]; 
+https://stackoverflow.com/questions/12409299/how-to-get-current-formatted-date-dd-mm-yyyy-in-javascript-and-append-it-to-an-i)
+ */
