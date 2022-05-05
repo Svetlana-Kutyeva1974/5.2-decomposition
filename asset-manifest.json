@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/5.2-decomposition/static/css/main.caff2143.css",
+    "main.js": "/5.2-decomposition/static/js/main.d0cf5fff.js",
+    "index.html": "/5.2-decomposition/index.html",
+    "main.caff2143.css.map": "/5.2-decomposition/static/css/main.caff2143.css.map",
+    "main.d0cf5fff.js.map": "/5.2-decomposition/static/js/main.d0cf5fff.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.caff2143.css",
+    "static/js/main.d0cf5fff.js"
+  ]
+}
