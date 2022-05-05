@@ -59,3 +59,37 @@
   margin-right: 20px;
 }
 
+.spanWidget{
+  margin-right: 20px;
+  text-align: left;
+}
+
+.segment{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-top: 10px;
+
+}
+
+.widget{
+  margin-top: 20px;
+}
+
+.banner{
+  margin-top: 20px;
+}
+.title{
+  color: blue;
+}
+a{
+  text-decoration: none;
+}
+
+.container2{
+  display: flex;
+}
+
+li{
+  list-style-type: none;
+}

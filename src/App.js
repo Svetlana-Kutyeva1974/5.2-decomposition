@@ -1,13 +1,14 @@
 // import logo from './logo.svg';
 import './App.css';
 // import shortid from 'shortid'
-import { nanoid } from 'nanoid'
+import { nanoid } from 'nanoid';
 import Rates from "./components/Rates";
 import Search from "./components/Search";
-import Widget from "./components/Widget";
+import Widgets from "./components/Widgets";
 import Banner from "./components/Banner";
 import News from "./components/News";
 import * as data from "./data/data";
+import Widget from "./components/Widget";
 
 function App() {
   const titleNews = ['Сейчас в СМИ','В Германии','Рекомендуем'];
@@ -61,24 +62,22 @@ const dayLink =
         link: 'https://yandex.ru/search/?lr=101432&text=%D0%B3%D0%B4%D0%B5+%D0%BA%D1%83%D0%BF%D0%B8%D1%82%D1%8C+%D0%B4%D0%BE%D0%BB%D0%BB%D0%B0%D1%80%D1%8B+%D0%B2+%D0%BC%D0%BE%D1%81%D0%BA%D0%B2%D0%B5&src=suggest_B',
         title: 'где купить доллары в москве',
     }
-const widgetsItems = [];
 
-console.log('дата', new Date(Date.now()).toLocaleString());
+//console.log('дата', new Date(Date.now()).toLocaleString());
 
   return (
     <div className='container'>
-     <News listTitle={titleNews} listNews={news}/>
-       <Rates rates={data.rates}/>
-       <Search titles={data.searchTitles} dayLink={dayLink}/>
-       <Banner/>
-       <Widget items={widgetsItems}/>
+      <div className='container2'>
+        <News listTitle={titleNews} listNews={news}/>
+        <Widget widget={{ widgetName: "Работа над ошибками", widgetBody: [{id: nanoid(), img: '/', describe: "Смотрите на Яндексе и запоминайте"}]}}/>
+      </div>
+      <Rates rates={data.rates}/>
+      <Search titles={data.searchTitles} dayLink={dayLink}/>
+      <Banner/>
+      <Widgets items={data.widgetsItems}/>
    </div>
   );
 }
 
 export default App;
-//https://github.com/RebikHub/ra-composition-decomposition/tree/master/src
 
-//https://github.com/nugmanov87/ra-5-2/blob/master/src/components/SearchBar.jsx
-
-//https://github.com/vikkelas/RA-5-2/blob/main/src/News/News.js

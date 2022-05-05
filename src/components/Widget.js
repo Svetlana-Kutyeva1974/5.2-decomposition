@@ -1,14 +1,42 @@
-import React from "react";
+import React from 'react';
+//import { nanoid } from 'nanoid';
 
-// Рекламный баннер
+function Widget({widget}) {
+  console.log('массивы для виджетов', widget, widget.widgetName);
+  console.log('keys array', Object.keys(widget.widgetBody), widget.widgetBody.length); 
+  /*const item = widget.widgetBody.map(item => {
+              console.log('ключи элемента', Object.keys(item));
+              const arrayKeys= Object.keys(item);
+                const newarr = arrayKeys.slice(1).map(itm => {
+                    return (
+                      <span className ='spanWidget' >
+                        {item[itm]}
+                      </span>
+                    );
+                  });
+                  */
+    return (
+        <div className="widget">
+            <ul className="title" >{widget.widgetName}</ul>
+           
+            {widget.widgetBody.map(item => {
+              console.log('ключи элемента', Object.keys(item));
+              const arrayKeys= Object.keys(item);
+                const newarr = arrayKeys.slice(1).map(itm => {
+                    return (
+                      <span className ='spanWidget' >
+                        {item[itm]}
+                      </span>
+                    );
+                  });
+              return (<li key= {item.id}>{newarr}</li>);
+            })}
+             
+        </div>
+    );
+}
 
-const Banner = () => {
-  return (
-    <div
-      className=""
-      data-text="форсаж хобс и шоу в кино с 1 августа"
-    ></div>
-  );
-};
+export default Widget;
 
-export default Banner;
+
+//key= {itm.id} у span

@@ -1,28 +1,31 @@
 import React from "react";
 //import PropTypes from "prop-types";
-import { nanoid } from 'nanoid'
+import { nanoid } from 'nanoid';
+
 
 const News = ({ listTitle, listNews }) => {
   return (
     <>
-    <div className="ui horizontal list">
-      {listTitle.map(link => (
+    <div>
+      <div className="ui horizontal list">
+        {listTitle.map(link => (
+          <a href="/" className="item" key={nanoid()}>
+            {link}
+          </a>
+        ))}
+        {new Date(Date.now()).toLocaleString()}
+        
+      </div>
+      
+      <div className="ui vertikal list">
+      {listNews.map(link => (
         <a href="/" className="item" key={nanoid()}>
-          {link}
+          {link.text}
         </a>
       ))}
-      {new Date(Date.now()).toLocaleString()}
-    </div>
-    
-    <div className="ui vertikal list">
-    {listNews.map(link => (
-      <a href="/" className="item" key={nanoid()}>
-        {link.text}
-      </a>
-    ))}
-  </div>
 
-  
+    </div>
+  </div>
   </>
   );
 };

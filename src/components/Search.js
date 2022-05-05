@@ -7,7 +7,7 @@ const Search = ({ titles}) => {
   return (
     <>
       <SearchList links={titles} />
-      <div className="ui fluid action input">
+      <div className="input">
         <input type="text" placeholder="Search..." />
         <div className="ui button"><b>Найдется все. Например</b> {'example text...'}</div>
       </div>

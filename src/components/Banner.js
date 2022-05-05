@@ -5,9 +5,9 @@ import React from "react";
 const Banner = () => {
   return (
     <div
-      className=""
+      className="banner"
       data-text="форсаж хобс и шоу в кино с 1 августа"
-    ></div>
+    >{'рекламный блок кино'}</div>
   );
 };
 
