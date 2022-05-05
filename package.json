@@ -2,7 +2,7 @@
   "name": "5.2-decomposition",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://svetlana-kutyeva1974.github.io/ra5.2-decomposition/",
+  "homepage": "https://svetlana-kutyeva1974.github.io/5.2-decomposition/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
